@@ -1,0 +1,110 @@
+body{
+	background: url("../images/loginbackground.jpg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#leftside {
+	margin-top: 15%;
+}
+
+#rightside {
+	margin-top: 25%;
+	width: 60%;
+}
+
+#submit
+{
+	margin-top: 8px;
+	width:75%;
+	font-size: 100%;
+	color: white;
+	background-color:#37a79b;
+	border: 1px solid #308178;
+   	border-width: 1px 1px 4px;
+   	border-radius: 7px;
+}
+#submit:hover
+{
+	background-color:#308178;
+	cursor: hand;
+}
+
+
+	/* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 200px) {
+        #leftside {
+		margin-top: 5%;
+		}
+		#rightside {
+			margin-top: 0%;
+			margin-right: 0%;
+			width: 90%;
+		}
+		#logoimg {
+			width:150px;
+		}
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+    	#leftside {
+		margin-top: 5%;
+		}
+		#rightside {
+			margin-top: 0%;
+			width: 70%;
+			margin-right: 0%;
+		}
+		#logoimg {
+			width:200px;
+		}
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+		#leftside {
+		margin-top: 5%;
+		}
+		#rightside {
+			margin-top: 5%;
+			width: 70%;
+			margin-right: 0%;
+		}
+		#logoimg {
+			width:200px;
+		}
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+		#leftside {
+		margin-top: 15%;
+		}
+		#rightside {
+			margin-top: 25%;
+			width: 60%;
+			margin-right: 50%;
+		}
+		#logoimg {
+			width:250px;
+		}
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+    	#leftside {
+		margin-top: 15%;
+		}
+		#rightside {
+			margin-top: 25%;
+			width: 60%;
+			margin-right: 50%;
+		}
+		#logoimg {
+			width:250px;
+		}
+    }
+			

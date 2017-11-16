@@ -1,0 +1,23 @@
+@CHARSET "ISO-8859-1";
+
+#productsTable {
+	background: #f9f9f9;
+	height: 200px;
+	overflow: auto;
+}
+
+#receiptsTable {
+	background: #f9f9f9;
+	height: 340px;
+	overflow: auto;
+}
+
+#site-wrapper {
+  height: 1150px; /* Temp: Simulates a tall page. */
+}
+
+.product-alert .modal-content {
+	color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}

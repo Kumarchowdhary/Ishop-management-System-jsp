@@ -1,0 +1,7 @@
+@CHARSET "ISO-8859-1";
+
+#employeeTable {
+	background: #f9f9f9;
+	height: 380px;
+	overflow: auto;
+}

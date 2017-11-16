@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.5.0.v201506092134 Build &lt;@BUILD@></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="19">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.mysql.jdbc.Driver</property>
+            <property name="odaURL">jdbc:mysql://localhost:3306/management_system</property>
+            <property name="odaUser">root</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set" id="20">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">product_id</property>
+                    <text-property name="displayName">product_id</text-property>
+                    <text-property name="heading">product_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">product_name</property>
+                    <text-property name="displayName">product_name</text-property>
+                    <text-property name="heading">product_name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">product_price</property>
+                    <text-property name="displayName">product_price</text-property>
+                    <text-property name="heading">product_price</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">product_quantity</property>
+                    <text-property name="displayName">product_quantity</text-property>
+                    <text-property name="heading">product_quantity</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">total_price</property>
+                    <text-property name="displayName">total_price</text-property>
+                    <text-property name="heading">total_price</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">product_id</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">product_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">product_price</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">product_quantity</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">total_price</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">product_id</property>
+                    <property name="nativeName">product_id</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">product_name</property>
+                    <property name="nativeName">product_name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">product_price</property>
+                    <property name="nativeName">product_price</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">product_quantity</property>
+                    <property name="nativeName">product_quantity</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">total_price</property>
+                    <property name="nativeName">total_price</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select * 
+from receipt;]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>product_id</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>product_id</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>product_id</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>product_name</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>product_name</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>product_name</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>product_price</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>product_price</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>product_price</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>product_quantity</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>product_quantity</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>product_quantity</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>total_price</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>total_price</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>total_price</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2"/>
+    </page-setup>
+    <body>
+        <image id="70">
+            <property name="height">1.3229166666666667in</property>
+            <property name="width">7.916666666666667in</property>
+            <property name="source">file</property>
+            <expression name="uri" type="constant">report banner.jpg</expression>
+        </image>
+        <image id="74">
+            <property name="height">0.6145833333333334in</property>
+            <property name="width">7.947916666666667in</property>
+            <property name="source">file</property>
+            <expression name="uri" type="constant">re.jpg</expression>
+        </image>
+        <table id="24">
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">thin</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">thin</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">thin</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">thin</property>
+            <property name="textAlign">center</property>
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">product_id</property>
+                    <text-property name="displayName">product_id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["product_id"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">product_name</property>
+                    <text-property name="displayName">product_name</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["product_name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">product_price</property>
+                    <text-property name="displayName">product_price</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["product_price"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">product_quantity</property>
+                    <text-property name="displayName">product_quantity</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["product_quantity"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">total_price</property>
+                    <text-property name="displayName">total_price</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["total_price"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Aggregation</property>
+                    <property name="dataType">integer</property>
+                    <property name="aggregateFunction">RUNNINGCOUNT</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Aggregation_1</property>
+                    <property name="dataType">float</property>
+                    <property name="aggregateFunction">VARIANCE</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">dataSetRow["product_price"] * 0.05</expression>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding</property>
+                    <expression name="expression" type="javascript">dataSetRow["product_price"] * 0.05</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding_1</property>
+                    <expression name="expression" type="javascript">row["Column Binding"] + ( row["product_price"] * row["product_quantity"] )</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding_2</property>
+                    <expression name="expression" type="javascript">( dataSetRow["product_price"] + (dataSetRow["product_price"] * 0.05)  ) * dataSetRow["product_quantity"]</expression>
+                    <property name="dataType">float</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Aggregation_2</property>
+                    <property name="dataType">float</property>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["Column Binding_2"]</expression>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <column id="49"/>
+            <column id="50"/>
+            <column id="51"/>
+            <column id="52"/>
+            <column id="53"/>
+            <column id="54"/>
+            <column id="55"/>
+            <header>
+                <row id="25">
+                    <cell id="26">
+                        <label id="56">
+                            <text-property name="text">S.No</text-property>
+                        </label>
+                    </cell>
+                    <cell id="27">
+                        <label id="57">
+                            <text-property name="text">Product Name</text-property>
+                        </label>
+                    </cell>
+                    <cell id="28">
+                        <label id="58">
+                            <text-property name="text">Quantity</text-property>
+                        </label>
+                    </cell>
+                    <cell id="29">
+                        <label id="59">
+                            <text-property name="text">Each Price</text-property>
+                        </label>
+                    </cell>
+                    <cell id="30">
+                        <label id="60">
+                            <text-property name="text">Tax %</text-property>
+                        </label>
+                    </cell>
+                    <cell id="31">
+                        <label id="61">
+                            <text-property name="text">Tax Charges Each</text-property>
+                        </label>
+                    </cell>
+                    <cell id="32">
+                        <label id="62">
+                            <text-property name="text">Total Price</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="33">
+                    <cell id="34">
+                        <data id="67">
+                            <property name="resultSetColumn">Aggregation</property>
+                        </data>
+                    </cell>
+                    <cell id="35">
+                        <data id="64">
+                            <property name="resultSetColumn">product_name</property>
+                        </data>
+                    </cell>
+                    <cell id="36">
+                        <data id="66">
+                            <property name="resultSetColumn">product_quantity</property>
+                        </data>
+                    </cell>
+                    <cell id="37">
+                        <data id="65">
+                            <property name="resultSetColumn">product_price</property>
+                        </data>
+                    </cell>
+                    <cell id="38">
+                        <label id="75">
+                            <text-property name="text">5%</text-property>
+                        </label>
+                    </cell>
+                    <cell id="39">
+                        <data id="82">
+                            <property name="resultSetColumn">Column Binding</property>
+                        </data>
+                    </cell>
+                    <cell id="40">
+                        <data id="84">
+                            <property name="resultSetColumn">Column Binding_2</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="41">
+                    <cell id="42"/>
+                    <cell id="43"/>
+                    <cell id="44"/>
+                    <cell id="45"/>
+                    <cell id="46"/>
+                    <cell id="47">
+                        <label id="79">
+                            <property name="fontWeight">bold</property>
+                            <property name="color">red</property>
+                            <property name="textAlign">right</property>
+                            <text-property name="text">GRAND TOTAL:</text-property>
+                        </label>
+                    </cell>
+                    <cell id="48">
+                        <data id="85">
+                            <property name="fontWeight">bold</property>
+                            <property name="color">red</property>
+                            <property name="resultSetColumn">Aggregation_2</property>
+                        </data>
+                    </cell>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>
